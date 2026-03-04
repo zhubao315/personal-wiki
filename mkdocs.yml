@@ -1,0 +1,150 @@
+site_name: LongCat 知识百科
+site_url: https://zhubao315.github.io/personal-wiki/
+site_author: LongCat
+site_description: 技术、投资、运动、生活 - 多领域专业知识体系，持续迭代更新的个人知识管理系统
+
+repo_name: zhubao315/personal-wiki
+repo_url: https://github.com/zhubao315/personal-wiki
+edit_uri: edit/main/
+
+theme:
+  name: material
+  language: zh-CN
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.prune
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - toc.integrate
+    - toc.sticky
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/book-open-page-variant
+
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s\u200b\-\(\)\[\]\{\}]'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - redirects:
+      redirect_maps:
+        'index.md': 'personal_wiki.md'
+  - awesome-pages:
+      collapse_single_pages: true
+      strict: false
+
+nav:
+  - 🏠 首页: personal_wiki.md
+  - 💻 技术/AI:
+    - 📊 AI技术趋势: tech/ai_trends.md
+    - 🤖 本地模型部署: tech/local_models.md
+    - 🔧 OpenClaw框架: tech/openclaw.md
+    - 📱 钉钉生态集成: tech/dingtalk_integration.md
+  - 💰 投资金融:
+    - 📈 投资理论: finance/investment_theory.md
+    - 🛡️ 风险管理: finance/risk_management.md
+    - 📊 市场分析: finance/market_analysis.md
+    - 🧠 投资心理: finance/investment_psychology.md
+  - 🏃 运动健康:
+    - 🏃‍♂️ 跑步训练: health/running_training.md
+    - ❤️ 心率分析: health/heart_rate_analysis.md
+    - 🥗 健身营养: health/fitness_nutrition.md
+    - 👟 装备评测: health/equipment_reviews.md
+  - 📚 参考资料:
+    - 📖 文档资源: references/documents.md
+    - 🔗 外部链接: references/links.md
+    - 📚 学习资源: references/learning.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - tables
+  - fenced_code
+  - codehilite:
+      guess_lang: true
+      linenums: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx_superfences.fence_code_format
+  - pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - footnotes
+  - attr_list
+  - def_list
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/zhubao315
+      name: GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/zhubao315
+      name: Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/zhubao315
+      name: LinkedIn
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+  version:
+    provider: mike
+  copyright: Copyright &copy; 2026 LongCat. All rights reserved.
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js
+
+copyright: Copyright &copy; 2026 LongCat Personal Wiki | MIT License
